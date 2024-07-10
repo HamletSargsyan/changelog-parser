@@ -316,7 +316,6 @@ def dump(
             )
 
         # Handle "yanked" part of the change object
-        print(type(change.get("yanked")))
         if not isinstance(change.get("yanked", False), bool):
             raise ValueError(
                 'The value associated with the "yanked" key of changelog entry '
