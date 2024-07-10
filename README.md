@@ -1,5 +1,16 @@
 # changelog-parser
+
+
 Yet another python changelog parser.
+
+## Install
+
+```
+pip install git+https://github.com/HamletSargsyan/changelog-parser.git
+```
+
+##  Examples
+
 * Loads data from a [`CHANGELOG.md` file](https://keepachangelog.com/en/1.1.0/) using code like:
    ```python
    import changelog
@@ -42,12 +53,12 @@ Yet another python changelog parser.
          "yanked": {
            "type": "boolean"
          },
-         "added": { "$ref": "#/$defs/change_list" },
-         "changed": { "$ref": "#/$defs/change_list" },
-         "depreciated": { "$ref": "#/$defs/change_list" },
-         "removed": { "$ref": "#/$defs/change_list" },
-         "fixed": { "$ref": "#/$defs/change_list" },
-         "security": { "$ref": "#/$defs/change_list" },
+         "добавлено": { "$ref": "#/$defs/change_list" },
+         "изменено": { "$ref": "#/$defs/change_list" },
+         "устарело": { "$ref": "#/$defs/change_list" },
+         "удалено": { "$ref": "#/$defs/change_list" },
+         "исправлено": { "$ref": "#/$defs/change_list" },
+         "безопасность": { "$ref": "#/$defs/change_list" },
          "compare_url": {
            "type": "string",
            "pattern": "^https?:\\/\\/.+"
@@ -64,6 +75,7 @@ Yet another python changelog parser.
      }
    }
    ```
+
 * Dumps data, structured like that above, to a [`CHANGELOG.md` file](https://keepachangelog.com) using code like
    ```python
    import changelog
